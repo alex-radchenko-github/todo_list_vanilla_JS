@@ -11,7 +11,7 @@ function render() {
 
 
         const buttonClose = document.createElement("SPAN");
-        const buttonCloseText = document.createTextNode("\u00D7");
+        const buttonCloseText = document.createTextNode("\uD83D\uDDD1");
         buttonClose.className = "close";
         buttonClose.appendChild(buttonCloseText);
         listItem.appendChild(buttonClose);
@@ -48,8 +48,8 @@ function addToList() {
 function deleteFromList() {
     const list1 = document.getElementById('myUL');
     list1.addEventListener('click', function(e){
-        if(e.target.nodeName === "BUTTON") {
-            e.target.parentNode.remove();
+        if(e.target.nodeName === "SPAN") {
+            e.target.parentElement.remove();
         }
     });
     document.getElementById("myInput").focus()
